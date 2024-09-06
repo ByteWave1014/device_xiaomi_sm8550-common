@@ -111,6 +111,9 @@ function blob_fixup() {
         vendor/etc/media_codecs_pineapple.xml|vendor/etc/media_codecs_pineapple_vendor.xml)
             sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio)/d" "${2}"
             ;;
+        vendor/lib64/vendor.libdpmframework.so)
+            "${PATCHELF}" --add-needed "libhidlbase_shim.so" "${2}"
+            ;;
     esac
 }
 
