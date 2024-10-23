@@ -91,7 +91,8 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "vendor.libdpmframework.so" "${2}"
             "${PATCHELF}" --add-needed "libshim.so" "${2}"
-        vendor/etc/seccomp_policy/atfwd@2.0.policy | vendor/etc/seccomp_policy/modemManager.policy | vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
+        vendor/etc/seccomp_policy/atfwd@2.0.policy | vendor/etc/seccomp_policy/modemManager.policy | vendor/etc/seccomp_policy/qwesd@2.0.policy | vendor/etc/seccomp_policy/wfdhdcphalservice.policy)
+
             [ -n "$(tail -c 1 "${2}")" ] && echo >> "${2}"
             grep -q "gettid: 1" "${2}" || echo "gettid: 1" >> "${2}"
             ;;
