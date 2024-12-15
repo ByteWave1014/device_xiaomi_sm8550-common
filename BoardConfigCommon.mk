@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2023-2024 Paranoid Android
+# Copyright (C) 2023-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -81,7 +81,7 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(COMMON_PATH)/configs/vintf/framework_matrix_xiaomi.xml \
-    vendor/pixelstar/config/device_framework_matrix.xml
+    vendor/aosp/config/device_framework_matrix.xml
 
 DEVICE_MANIFEST_FILE += \
     $(COMMON_PATH)/configs/vintf/manifest_kalama.xml \
