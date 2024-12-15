@@ -16,8 +16,7 @@ $(call inherit-product, vendor/xiaomi/sm8550-common/sm8550-common-vendor.mk)
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi \
-    hardware/qcom/audio/hal
+    hardware/xiaomi 
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
@@ -98,8 +97,6 @@ PRODUCT_PACKAGES += \
     libsndcardparser \
     libtinycompress \
     libvolumelistener
-
-AUDIO_HAL_DIR := hardware/qcom-caf/sm8550/audio/primary-hal
 
 # Audio
 PRODUCT_COPY_FILES += \
